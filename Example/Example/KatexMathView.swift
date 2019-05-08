@@ -12,27 +12,21 @@ class KatexMathView: WKWebView {
     
     func loadLatex(_ content: String ) {
         
+        guard let path = Bundle.main.path(forResource: "katex/index", ofType: "html") else {
+            fatalError()
+        }
+        
         self.configuration.preferences.javaScriptEnabled = true
         self.scrollView.isScrollEnabled = false
         self.scrollView.bounces = false
         self.navigationDelegate = self
-        let ferfr = getHtml(content)
-        guard let path = Bundle.main.path(forResource: "katex/index", ofType: "html") else {
-            fatalError()
-        }
+        let htmlContent = getHtml(content, path)
         
-        self.loadHTMLString(ferfr, baseURL: URL(fileURLWithPath: path))
-        
-
+        self.loadHTMLString(htmlContent, baseURL: URL(fileURLWithPath: path))
     }
     
-    
-    
-    
-    func getHtml(_ htmlContent: String) -> String {
-        guard let path = Bundle.main.path(forResource: "katex/index", ofType: "html") else {
-            fatalError()
-        }
+    func getHtml(_ htmlContent: String, _ path: String) -> String {
+        
         var htmlString = try! String(contentsOfFile: path, encoding: .utf8)
         
         var content = htmlContent
