@@ -13,7 +13,7 @@ WKWebView to render TeX expressions inline with text in swift
    @IBOutlet weak var mathView: KatexMathView!
 ```
 
-You can load the latec expression as shown below
+You can load the latex expression as shown below
 ```
   let latex: String = "Find the value of $k$, if $x + 6$ is a factor of $- k + x^{3} + 16 x^{2} + 76 x$"
   mathView.loadLatex(latex)
