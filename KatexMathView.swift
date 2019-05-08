@@ -20,6 +20,7 @@ class KatexMathView: WKWebView {
         self.scrollView.bounces = false
         self.navigationDelegate = self
         
+        self.isOpaque = false
         self.backgroundColor = UIColor.clear
         self.scrollView.backgroundColor = UIColor.clear
         
