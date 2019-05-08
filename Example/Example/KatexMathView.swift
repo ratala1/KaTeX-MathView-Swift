@@ -20,6 +20,10 @@ class KatexMathView: WKWebView {
         self.scrollView.isScrollEnabled = false
         self.scrollView.bounces = false
         self.navigationDelegate = self
+        
+        self.backgroundColor = UIColor.clear
+        self.scrollView.backgroundColor = UIColor.clear
+        
         let htmlContent = getHtml(content, path)
         
         self.loadHTMLString(htmlContent, baseURL: URL(fileURLWithPath: path))
