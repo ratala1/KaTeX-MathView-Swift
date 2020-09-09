@@ -24,4 +24,5 @@ You can load the latex expression as shown below
 ### Credits
 
 KaTeX (http://khan.github.io/KaTeX/)
+
 Android: https://github.com/lingarajsankaravelu/Katex
