@@ -20,3 +20,8 @@ You can load the latex expression as shown below
 ```
 
 "$" is the default delimitter. If you have other character in your LaTeX expression, change the delimitter in KatexMathView.swift
+
+### Credits
+
+KaTeX (http://khan.github.io/KaTeX/)
+Android: https://github.com/lingarajsankaravelu/Katex
