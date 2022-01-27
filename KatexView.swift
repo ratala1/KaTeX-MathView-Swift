@@ -14,6 +14,10 @@ public struct KatexView: View {
     self.latex = latex
   }
 
+  public static func resetHeightCache() {
+    KatexMathViewRepresentable.heightCache = [Int: CGFloat]()
+  }
+
   public var body: some View {
     ZStack {
       KatexMathViewRepresentable(latex: latex, contentHeight: $contentHeight, isLoaded: $isLoaded)
