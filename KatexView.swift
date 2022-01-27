@@ -1,7 +1,7 @@
 import SwiftUI
 import WebKit
 
-public struct KatextView: View {
+public struct KatexView: View {
   private let latex: String
 
   @State
