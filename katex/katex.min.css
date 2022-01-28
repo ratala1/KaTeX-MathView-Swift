@@ -2,5 +2,14 @@
 img {
     max-width:100% !important;
     width:100% !important;
-    
+
+}
+/* Disable touch and text-selection. */
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+:root {
+  color-scheme: light dark;
 }
